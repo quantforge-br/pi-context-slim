@@ -55,7 +55,7 @@ function compactRules(section: string): string {
 		.join("\n");
 }
 
-export default function contextBudget(pi: ExtensionAPI): void {
+export default function contextSlim(pi: ExtensionAPI): void {
 	pi.on("context_with_system", (event) => {
 		const system = event.messages.find((message) => message.role === "system");
 		if (!system || system.role !== "system" || !system.sections) return;
