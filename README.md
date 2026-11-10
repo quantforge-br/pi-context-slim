@@ -6,13 +6,12 @@ Pi builds its system prompt from named sections (`preamble`, `tools`, `rules`, `
 
 ## What it does
 
-It hooks `context_with_system`, which Pi fires before each model request, after every other extension has contributed its prompt sections. For the leading system message it rewrites three sections in place:
+It hooks `context_with_system`, which Pi fires before each model request, after every other extension has contributed its prompt sections. For the leading system message it rewrites two sections in place:
 
 | Section | Change |
 |---|---|
 | `tools` | Replaces the description line of 13 optional tools with a shorter sentence |
 | `rules` | Replaces 7 guideline lines whose text contains a known upstream sentence |
-| `codemode_titles` | Collapses the section to a single script-title guideline; no-op in current Pi versions, which do not emit that section |
 
 Matching is line-based and exact: only a line starting with `- <tool>: ` is replaced, and only the matching `rules` line is swapped. Everything else in the section — including Pi's `<tools>`/`<rules>` wrappers — is left untouched.
 

@@ -28,8 +28,6 @@ const RULE_REWRITES: Array<readonly [string, string]> = [
 	["Confirmation creates or revises", "Confirm goal drafts atomically."],
 ] as const;
 
-const CODEMODE_TITLE_GUIDELINE = "Start each codemode script with one comment describing it in the user's language; keep // @options first.";
-
 function compactTools(section: string): string {
 	return section
 		.split("\n")
@@ -61,6 +59,5 @@ export default function contextSlim(pi: ExtensionAPI): void {
 		if (!system || system.role !== "system" || !system.sections) return;
 		if (system.sections.tools) system.sections.tools = compactTools(system.sections.tools);
 		if (system.sections.rules) system.sections.rules = compactRules(system.sections.rules);
-		if (system.sections.codemode_titles) system.sections.codemode_titles = CODEMODE_TITLE_GUIDELINE;
 	});
 }
