@@ -1,6 +1,6 @@
 {
   "name": "pi-context-slim",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Compact redundant Pi tool prompt metadata without changing tool behavior",
   "type": "module",
   "license": "MIT",
@@ -28,7 +28,7 @@
     ]
   },
   "peerDependencies": {
-    "@earendil-works/pi-coding-agent": "*"
+    "@earendil-works/pi-coding-agent": ">=0.87.0"
   },
   "scripts": {
     "check": "node --check src/index.ts && node --check src/compact.ts",
