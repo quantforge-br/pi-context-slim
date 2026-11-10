@@ -31,7 +31,8 @@
     "@earendil-works/pi-coding-agent": "*"
   },
   "scripts": {
-    "check": "node --check src/index.ts",
+    "check": "node --check src/index.ts && node --check src/compact.ts",
+    "test": "node --test",
     "pack": "npm pack --dry-run"
   }
 }
