@@ -1,6 +1,6 @@
 {
   "name": "pi-context-slim",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Compact redundant Pi tool prompt metadata without changing tool behavior",
   "type": "module",
   "license": "MIT",

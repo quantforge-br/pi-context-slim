@@ -1,10 +1,15 @@
 # Changelog
 
-## [Unreleased]
+## [0.1.2]
 
 ### Added
 
 - A pinned TypeScript toolchain and GitHub Actions workflow run syntax checks, `tsc --noEmit`, tests, and package validation on every push and pull request.
+
+### Changed
+
+- Development uses `npm ci` with a committed lockfile.
+- `npm run typecheck` checks the extension against the pinned Pi API (`@earendil-works/pi-coding-agent@1.5.1`) while the runtime peer dependency remains compatible with Pi `>=0.87.0`.
 
 ## [0.1.1]
 
