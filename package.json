@@ -1,12 +1,12 @@
 {
-  "name": "pi-context-budget",
+  "name": "pi-context-budget-optimizer",
   "version": "0.1.0",
   "description": "Compact redundant Pi tool prompt metadata without changing tool behavior",
   "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/quantmind-br/pi-context-budget.git"
+    "url": "https://github.com/quantmind-br/pi-context-budget-optimizer.git"
   },
   "keywords": [
     "pi-package",

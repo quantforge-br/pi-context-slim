@@ -1,4 +1,4 @@
-# pi-context-budget
+# pi-context-budget-optimizer
 
 A Pi package that reduces redundant prompt metadata from optional tools without changing tool schemas or execution behavior.
 
@@ -17,13 +17,13 @@ It does not remove tools, alter tool arguments, change tool results, or change p
 Install from npm:
 
 ```sh
-pi install npm:pi-context-budget
+pi install npm:pi-context-budget-optimizer
 ```
 
 Or try it for one invocation:
 
 ```sh
-pi -e npm:pi-context-budget
+pi -e npm:pi-context-budget-optimizer
 ```
 
 After installation, Pi loads the package through its `pi.extensions` manifest. Start a new session or run `/reload`.
