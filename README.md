@@ -123,9 +123,10 @@ Compare the `tools` and `rules` sections with the extension disabled: remove it 
 ## Development
 
 ```sh
-npm install --ignore-scripts
-npm run check          # node --check: syntax only, no type checking
-npm test               # node --test, no dependencies
+npm ci --ignore-scripts
+npm run check          # node --check: syntax only
+npm run typecheck      # tsc --noEmit against the pinned Pi API
+npm test               # node --test
 npm pack --dry-run
 ```
 
@@ -137,7 +138,7 @@ src/compact.ts          the rewrite tables and the section transforms
 test/compact.test.ts    fixtures captured from a live prompt
 ```
 
-The package has no runtime dependencies and no dev dependencies. Pi provides `@earendil-works/pi-coding-agent` for the extension types at load time, and `@earendil-works/pi-ai` for the prompt helpers used in the verification snippet. Node 24 runs the TypeScript sources directly, which is what the test script relies on.
+The package has no runtime dependencies. The development-only dependencies pin TypeScript, Node.js types, and `@earendil-works/pi-coding-agent@1.5.1` so `npm run typecheck` checks the extension against a known Pi API while the peer dependency remains compatible with Pi `>=0.87.0`. `npm ci` installs the exact versions from `package-lock.json`. Pi provides `@earendil-works/pi-ai` for the prompt helpers used in the verification snippet. Node 24 runs the TypeScript sources directly, which is what the test script relies on.
 
 Publishing, keeping the prefixed tag so it survives a rename:
 

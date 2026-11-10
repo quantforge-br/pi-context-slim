@@ -1,12 +1,19 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- A pinned TypeScript toolchain and GitHub Actions workflow run syntax checks, `tsc --noEmit`, tests, and package validation on every push and pull request.
+
 ## [0.1.1]
 
 ### Added
 
 - `/context-slim` reports what the last request rewrote, which tool descriptions shrank, and which rule sentences found no line.
 - A one-time warning when the prompt declares a goal tool but a goal rule rewrite no longer matches, so drift is visible instead of silent.
-- Fixture tests over lines captured from a live prompt (`npm test`, `node --test`, no dependencies).
+- Fixture and integration tests over lines captured from a live prompt (`npm test`, `node --test`).
+- A pinned development toolchain (`typescript`, `@types/node`, and `@earendil-works/pi-coding-agent@1.5.1`) with `npm run typecheck` / `tsc --noEmit`.
 
 ### Changed
 

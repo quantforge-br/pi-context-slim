@@ -32,7 +32,13 @@
   },
   "scripts": {
     "check": "node --check src/index.ts && node --check src/compact.ts",
+    "typecheck": "tsc --noEmit",
     "test": "node --test",
     "pack": "npm pack --dry-run"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.5.1",
+    "@types/node": "26.6.6",
+    "typescript": "6.0.3"
   }
 }
