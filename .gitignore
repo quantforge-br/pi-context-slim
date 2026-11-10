@@ -1,2 +1,6 @@
 node_modules/
 .DS_Store
+
+# Local skill sync state, not part of the package.
+.agents/
+skills-lock.json
